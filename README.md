@@ -1,41 +1,43 @@
-# 💰 Simple Bank Account UI (Classic Redux)
+# 💰 Banking Dashboard App (Redux Toolkit)
 
-A minimal React app that simulates a basic bank account system using **classic Redux** (v5). This project demonstrates Redux concepts without Redux Toolkit, managing state manually through reducers, action creators, and middleware.
+A clean and functional React app that simulates a bank account system, built using **Redux Toolkit (RTK)** for modern state management and classic **Redux Thunk** for async operations like currency conversion. The app offers a complete banking simulation experience with a focus on clarity, scalability, and usability.
 
 ---
 
 ## 🚀 Features
 
-- Create a new bank account
-- Deposit and withdraw funds
-- Request a loan with a specific purpose
-- Pay back an active loan
-- Currency selection for deposits
-- Async operations handled using `redux-thunk` (e.g., simulating currency conversion delays)
+- Create and manage a personal bank account
+- Deposit and withdraw funds in different currencies
+- Request and repay loans with a specified purpose
+- Convert foreign currencies (e.g., GBP, EUR) to USD using async API logic
+- Real-time UI updates based on global state changes
 
 ---
 
-## 🧠 What’s Implemented
+## ⚙️ What’s Implemented
 
-- Properly structured Redux-based application using **classic Redux (v5)**
-- Integrated `useSelector` and `useDispatch` hooks for state access and action dispatching in React
-- Manually defined **action creators**, **reducers**, and **Redux store**
-- Used `redux-thunk` for handling asynchronous operations (e.g., currency conversion simulation)
-- Built a clean and interactive UI with dynamic state updates for all account operations
-- Styling done using standard **CSS**, without any CSS frameworks like Tailwind
+- State managed using **Redux Toolkit slices**
+- **Classic Redux Thunk** used for asynchronous currency conversion
+- Integrated `useDispatch` and `useSelector` hooks from React Redux
+- Modular Redux architecture with clean slice separation
+- Fully interactive UI reflecting all account actions
+- Styling done using **standard CSS** (no UI libraries or frameworks)
 
 ---
 
-## 📦 Tech Stack
+## 🔧 Tech Stack
 
 - React
-- Redux (v5)
+- Redux Toolkit
 - React Redux
-- Redux Thunk
+- Redux Thunk (manual thunks)
 - Plain CSS
 
 ---
 
-## 📈 Next Phase (Coming Soon)
+## 🧱 Architecture Highlights
 
-🔄 The project will be refactored and upgraded using **Redux Toolkit (RTK)** to improve scalability, reduce boilerplate, and adopt best practices.
+- Feature-based slice structure (`account`, `customer`, etc.)
+- Custom async logic implemented using classic thunk middleware
+- Mutative logic simplified using Immer (built into RTK)
+- Developer-friendly debugging via Redux DevTools
